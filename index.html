@@ -95,21 +95,34 @@
 
         .contact-info {
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
             margin-top: 20px;
         }
 
         .contact-item {
             display: flex;
-            align-items: center;
-            gap: 8px;
+            align-items: flex-start;
+            gap: 10px;
             font-size: 0.9rem;
+            width: 100%;
+            max-width: 280px;
+            justify-content: flex-start;
         }
 
         .contact-item i {
             font-size: 1.1rem;
+            width: 20px;
+            text-align: center;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .contact-item span {
+            word-break: break-word;
+            flex: 1;
+            line-height: 1.4;
         }
 
         .section-title {
@@ -357,11 +370,11 @@
             .resume-container {
                 grid-template-columns: 1fr;
             }
-            
+
             .projects-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .name {
                 font-size: 2rem;
             }
@@ -369,11 +382,14 @@
 
         @media (max-width: 768px) {
             .contact-info {
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
+                align-items: flex-start;
+                padding: 0 20px;
             }
-            
+
+            .contact-item {
+                max-width: 100%;
+            }
+
             .skills-grid {
                 grid-template-columns: 1fr;
             }
@@ -397,383 +413,387 @@
     </style>
 </head>
 <body>
-    <div class="resume-container">
-        <div class="sidebar">
-            <div class="header">
-                <h1 class="name">MUHAMMAD RASHID KP</h1>
-                <div class="title">Kotlin Multiplatform & Android Developer</div>
-                <div class="experience">4+ Years of Experience</div>
-                
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+91 95629 12668</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>rashidkp141@outlook.com</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <span>linkedin.com/in/muhammad-rashid-kp</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-github"></i>
-                        <span>github.com/012rashidkp</span>
-                    </div>
-                </div>
-            </div>
+<div class="resume-container">
+    <div class="sidebar">
+        <div class="header">
+            <h1 class="name">MUHAMMAD RASHID KP</h1>
+            <div class="title">Kotlin Multiplatform & Android Developer</div>
+            <div class="experience">4+ Years of Experience</div>
 
-            <div class="card">
-                <h2 class="section-title"><i class="fas fa-user"></i> Professional Summary</h2>
-                <p>Kotlin Multiplatform (KMP) and Android developer with 4+ years' experience delivering scalable, cross-platform mobile solutions for Android, iOS, desktop, and macOS. Proven track record of building performant applications with Clean Architecture, Jetpack Compose, and modern Android SDK practices. Skilled at optimizing app performance, reducing crash rates, and integrating complex APIs.</p>
-            </div>
-
-            <div class="card">
-                <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
-                <div class="education-item">
-                    <div class="education-degree">Bachelor of Engineering (BE)</div>
-                    <div class="education-details">VTU (2014–2019), 60%</div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 95629 12668</span>
                 </div>
-                <div class="education-item">
-                    <div class="education-degree">Higher Secondary</div>
-                    <div class="education-details">GVHSS Chettiyankinar (2012–2014), 60%</div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>rashidkp141@outlook.com</span>
                 </div>
-                <div class="education-item">
-                    <div class="education-degree">SSLC</div>
-                    <div class="education-details">KHMHSS (2011–2012), 85%</div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <span>linkedin.com/in/muhammad-rashid-kp</span>
                 </div>
-            </div>
-
-            <div class="card">
-                <h2 class="section-title"><i class="fas fa-certificate"></i> Certifications</h2>
-                <div class="certifications">
-                    <div class="cert-badge">
-                        <i class="fas fa-award"></i>
-                        <span>Advanced Android Development</span>
-                    </div>
-                    <div class="cert-badge">
-                        <i class="fas fa-award"></i>
-                        <span>Kotlin Multiplatform Mobile</span>
-                    </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <span>github.com/012rashidkp</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <span>github.com/025rashiditedpl</span>
                 </div>
             </div>
         </div>
 
-        <div class="main-content">
-            <div class="card">
-                <h2 class="section-title"><i class="fas fa-code"></i> Technical Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4>Languages</h4>
-                        <div class="skill-items">
-                            <span class="skill-tag">Kotlin</span>
-                            <span class="skill-tag">Java</span>
-                            <span class="skill-tag">C++</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Frameworks</h4>
-                        <div class="skill-items">
-                            <span class="skill-tag">Kotlin Multiplatform</span>
-                            <span class="skill-tag">Jetpack Compose</span>
-                            <span class="skill-tag">Compose Multiplatform</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Architecture</h4>
-                        <div class="skill-items">
-                            <span class="skill-tag">MVVM</span>
-                            <span class="skill-tag">Clean Architecture</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Backend Services</h4>
-                        <div class="skill-items">
-                            <span class="skill-tag">Spring Boot</span>
-                            <span class="skill-tag">Ktor Client</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Databases</h4>
-                        <div class="skill-items">
-                            <span class="skill-tag">Room</span>
-                            <span class="skill-tag">SQLDelight</span>
-                            <span class="skill-tag">SQLite</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Cloud & Services</h4>
-                        <div class="skill-items">
-                            <span class="skill-tag">Firebase</span>
-                            <span class="skill-tag">Cocopods</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Dependency Injection</h4>
-                        <div class="skill-items">
-                            <span class="skill-tag">Hilt Dagger</span>
-                            <span class="skill-tag">Koin</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Platforms</h4>
-                        <div class="skill-items">
-                            <span class="skill-tag">Android</span>
-                            <span class="skill-tag">iOS</span>
-                            <span class="skill-tag">Windows</span>
-                            <span class="skill-tag">macOS</span>
-                            <span class="skill-tag">Linux</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="card">
+            <h2 class="section-title"><i class="fas fa-user"></i> Professional Summary</h2>
+            <p>Kotlin Multiplatform (KMP) and Android developer with 4+ years' experience delivering scalable, cross-platform mobile solutions for Android, iOS, desktop, and macOS. Proven track record of building performant applications with Clean Architecture, Jetpack Compose, and modern Android SDK practices. Skilled at optimizing app performance, reducing crash rates, and integrating complex APIs.</p>
+        </div>
 
-            <div class="card">
-                <h2 class="section-title"><i class="fas fa-briefcase"></i> Professional Experience</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-date">Jan 2025 – Present</div>
-                        <div class="timeline-title">Safari Group of Companies — Android Developer</div>
-                        <div class="timeline-content">
-                            <ul>
-                                <li>Developing and maintaining enterprise Android applications for inventory & order management</li>
-                                <li>Integrated RESTful APIs, improving stock tracking efficiency by ~40%</li>
-                                <li>Adopted Jetpack Compose + Clean Architecture for modular, testable code</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Jun 2024 – Nov 2024</div>
-                        <div class="timeline-title">Inworth IT Solutions — Android/KMP Developer</div>
-                        <div class="timeline-content">
-                            <ul>
-                                <li>Built Android & KMP-based financial, e-commerce, and appointment apps</li>
-                                <li>Integrated secure payment gateways (Razorpay, Easebuzz) with zero-failure rate</li>
-                                <li>Reduced API response time by ~25% via optimized Ktor client implementation</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Mar 2022 – Present</div>
-                        <div class="timeline-title">SoftFruit Solutions — Android Developer</div>
-                        <div class="timeline-content">
-                            <ul>
-                                <li>Delivered high-quality Android apps with MVVM + Jetpack Compose</li>
-                                <li>Collaborated with designers to ship pixel-perfect Material 3 UIs</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Dec 2020 – Dec 2021</div>
-                        <div class="timeline-title">Manappuram Finance Ltd — Android Developer</div>
-                        <div class="timeline-content">
-                            <ul>
-                                <li>Developed secure financial apps with encrypted storage & biometric authentication</li>
-                                <li>Reduced crash rate from 5% to 1% using Firebase Crashlytics</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Aug 2019 – Oct 2020</div>
-                        <div class="timeline-title">Nuevo Informatica Ltd — Android Developer</div>
-                        <div class="timeline-content">
-                            <ul>
-                                <li>Built and shipped 4 Android apps with Retrofit, Room, and Glide</li>
-                                <li>Reviewed architecture & code for performance optimization</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+        <div class="card">
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+            <div class="education-item">
+                <div class="education-degree">Bachelor of Engineering (BE)</div>
+                <div class="education-details">VTU (2014–2019), 60%</div>
             </div>
-
-            <div class="card">
-                <h2 class="section-title"><i class="fas fa-project-diagram"></i> Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-title">CricTally (Android)</div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Jetpack Compose</span>
-                            <span class="tech-tag">SQLDelight</span>
-                            <span class="tech-tag">Clean Architecture</span>
-                        </div>
-                        <div class="project-desc">
-                            <ul>
-                                <li>Cricket match tracking and player statistics management</li>
-                                <li>Match management, team organization, performance tracking</li>
-                                <li>Offline persistence with SQLDelight database</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-title">Safari Pickup App (Android)</div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Jetpack Compose</span>
-                            <span class="tech-tag">Ktor Client</span>
-                            <span class="tech-tag">CameraX</span>
-                            <span class="tech-tag">Google Maps</span>
-                        </div>
-                        <div class="project-desc">
-                            <ul>
-                                <li>Attendance & trip management (Duty, Trip, Delivery)</li>
-                                <li>Face verification and location tracking</li>
-                                <li>Real-time API sync with trip details</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-title">Inventory App (Android)</div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Jetpack Compose</span>
-                            <span class="tech-tag">Room</span>
-                            <span class="tech-tag">Retrofit</span>
-                            <span class="tech-tag">Dagger Hilt</span>
-                        </div>
-                        <div class="project-desc">
-                            <ul>
-                                <li>Dynamic stock import (API or CSV/XLSX)</li>
-                                <li>Offline-ready with report export functionality</li>
-                                <li>Improved generation speed by 30%</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-title">OnlinePicking (Android)</div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Jetpack Compose</span>
-                            <span class="tech-tag">Clean Architecture</span>
-                            <span class="tech-tag">Retrofit</span>
-                        </div>
-                        <div class="project-desc">
-                            <ul>
-                                <li>Real-time stock tracking and barcode scanning</li>
-                                <li>Offline sync capabilities</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-title">Olea Labels (Android)</div>
-                        <div class="project-tech">
-                            <span class="tech-tag">SQLDelight</span>
-                            <span class="tech-tag">Koin</span>
-                            <span class="tech-tag">Bluetooth</span>
-                        </div>
-                        <div class="project-desc">
-                            <ul>
-                                <li>Extracted invoice data from PDFs</li>
-                                <li>Printed via Bluetooth connectivity</li>
-                                <li>Data management with SQLDelight</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-title">Styiz POS (Android)</div>
-                        <div class="project-tech">
-                            <span class="tech-tag">MVVM</span>
-                            <span class="tech-tag">Android SDK</span>
-                            <span class="tech-tag">Room</span>
-                        </div>
-                        <div class="project-desc">
-                            <ul>
-                                <li>Managed inventory and sales tracking</li>
-                                <li>Comprehensive reporting system</li>
-                                <li>Built with MVVM architecture</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-title">Styiz Employee Application</div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Biometric Auth</span>
-                            <span class="tech-tag">Real-time Updates</span>
-                            <span class="tech-tag">Theme Management</span>
-                        </div>
-                        <div class="project-desc">
-                            <ul>
-                                <li>Secure login with biometric authentication</li>
-                                <li>Appointment management for salon staff</li>
-                                <li>Theme management by gender</li>
-                                <li>Real-time appointment updates</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-title">NGL Loan Application</div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Encryption</span>
-                            <span class="tech-tag">Biometric Auth</span>
-                            <span class="tech-tag">Secure Data</span>
-                        </div>
-                        <div class="project-desc">
-                            <ul>
-                                <li>Loan application submission and status tracking</li>
-                                <li>Lender communication system</li>
-                                <li>Secure data handling with encryption</li>
-                                <li>Biometric authentication integration</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-title">Metro Food</div>
-                        <div class="project-tech">
-                            <span class="tech-tag">MVVM</span>
-                            <span class="tech-tag">Real-time Tracking</span>
-                            <span class="tech-tag">Push Notifications</span>
-                        </div>
-                        <div class="project-desc">
-                            <ul>
-                                <li>Food ordering and delivery tracking app</li>
-                                <li>Cart management system</li>
-                                <li>Real-time order tracking</li>
-                                <li>Push notifications integration</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div style="text-align: center; margin-top: 20px;">
-                    <strong>More projects:</strong> github.com/012rashidkp
-                </div>
+            <div class="education-item">
+                <div class="education-degree">Higher Secondary</div>
+                <div class="education-details">GVHSS Chettiyankinar (2012–2014), 60%</div>
             </div>
+            <div class="education-item">
+                <div class="education-degree">SSLC</div>
+                <div class="education-details">KHMHSS (2011–2012), 85%</div>
+            </div>
+        </div>
 
-            <div class="action-bar">
-                <button class="download-btn" onclick="window.print()">
-                    <i class="fas fa-download"></i> Download PDF
-                </button>
+        <div class="card">
+            <h2 class="section-title"><i class="fas fa-certificate"></i> Certifications</h2>
+            <div class="certifications">
+                <div class="cert-badge">
+                    <i class="fas fa-award"></i>
+                    <span>Advanced Android Development</span>
+                </div>
+                <div class="cert-badge">
+                    <i class="fas fa-award"></i>
+                    <span>Kotlin Multiplatform Mobile</span>
+                </div>
             </div>
         </div>
     </div>
 
-    <script>
-        // Add interactive effects
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add click effect to skill tags
-            const skillTags = document.querySelectorAll('.skill-tag');
-            skillTags.forEach(tag => {
-                tag.addEventListener('click', function() {
-                    this.style.transform = 'scale(0.95)';
-                    setTimeout(() => {
-                        this.style.transform = '';
-                    }, 150);
-                });
-            });
+    <div class="main-content">
+        <div class="card">
+            <h2 class="section-title"><i class="fas fa-code"></i> Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Languages</h4>
+                    <div class="skill-items">
+                        <span class="skill-tag">Kotlin</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C++</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Frameworks</h4>
+                    <div class="skill-items">
+                        <span class="skill-tag">Kotlin Multiplatform</span>
+                        <span class="skill-tag">Jetpack Compose</span>
+                        <span class="skill-tag">Compose Multiplatform</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Architecture</h4>
+                    <div class="skill-items">
+                        <span class="skill-tag">MVVM</span>
+                        <span class="skill-tag">Clean Architecture</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Backend Services</h4>
+                    <div class="skill-items">
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">Ktor Client</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Databases</h4>
+                    <div class="skill-items">
+                        <span class="skill-tag">Room</span>
+                        <span class="skill-tag">SQLDelight</span>
+                        <span class="skill-tag">SQLite</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Cloud & Services</h4>
+                    <div class="skill-items">
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">Cocopods</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Dependency Injection</h4>
+                    <div class="skill-items">
+                        <span class="skill-tag">Hilt Dagger</span>
+                        <span class="skill-tag">Koin</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Platforms</h4>
+                    <div class="skill-items">
+                        <span class="skill-tag">Android</span>
+                        <span class="skill-tag">iOS</span>
+                        <span class="skill-tag">Windows</span>
+                        <span class="skill-tag">macOS</span>
+                        <span class="skill-tag">Linux</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            // Add hover effect to project cards
-            const projectCards = document.querySelectorAll('.project-card');
-            projectCards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.borderLeftColor = 'var(--secondary)';
-                });
-                card.addEventListener('mouseleave', function() {
-                    this.style.borderLeftColor = 'var(--primary)';
-                });
-            });
+        <div class="card">
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Jan 2025 – Present</div>
+                    <div class="timeline-title">Safari Group of Companies — Android Developer</div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>Developing and maintaining enterprise Android applications for inventory & order management</li>
+                            <li>Integrated RESTful APIs, improving stock tracking efficiency by ~40%</li>
+                            <li>Adopted Jetpack Compose + Clean Architecture for modular, testable code</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Jun 2024 – Nov 2024</div>
+                    <div class="timeline-title">Inworth IT Solutions — Android/KMP Developer</div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>Built Android & KMP-based financial, e-commerce, and appointment apps</li>
+                            <li>Integrated secure payment gateways (Razorpay, Easebuzz) with zero-failure rate</li>
+                            <li>Reduced API response time by ~25% via optimized Ktor client implementation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Mar 2022 – Present</div>
+                    <div class="timeline-title">SoftFruit Solutions — Android Developer</div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>Delivered high-quality Android apps with MVVM + Jetpack Compose</li>
+                            <li>Collaborated with designers to ship pixel-perfect Material 3 UIs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Dec 2020 – Dec 2021</div>
+                    <div class="timeline-title">Manappuram Finance Ltd — Android Developer</div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>Developed secure financial apps with encrypted storage & biometric authentication</li>
+                            <li>Reduced crash rate from 5% to 1% using Firebase Crashlytics</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Aug 2019 – Oct 2020</div>
+                    <div class="timeline-title">Nuevo Informatica Ltd — Android Developer</div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>Built and shipped 4 Android apps with Retrofit, Room, and Glide</li>
+                            <li>Reviewed architecture & code for performance optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            // Print functionality
-            const downloadBtn = document.querySelector('.download-btn');
-            downloadBtn.addEventListener('click', function() {
-                window.print();
+        <div class="card">
+            <h2 class="section-title"><i class="fas fa-project-diagram"></i> Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-title">CricTally (Android)</div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Jetpack Compose</span>
+                        <span class="tech-tag">SQLDelight</span>
+                        <span class="tech-tag">Clean Architecture</span>
+                    </div>
+                    <div class="project-desc">
+                        <ul>
+                            <li>Cricket match tracking and player statistics management</li>
+                            <li>Match management, team organization, performance tracking</li>
+                            <li>Offline persistence with SQLDelight database</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-title">Safari Pickup App (Android)</div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Jetpack Compose</span>
+                        <span class="tech-tag">Ktor Client</span>
+                        <span class="tech-tag">CameraX</span>
+                        <span class="tech-tag">Google Maps</span>
+                    </div>
+                    <div class="project-desc">
+                        <ul>
+                            <li>Attendance & trip management (Duty, Trip, Delivery)</li>
+                            <li>Face verification and location tracking</li>
+                            <li>Real-time API sync with trip details</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-title">Inventory App (Android)</div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Jetpack Compose</span>
+                        <span class="tech-tag">Room</span>
+                        <span class="tech-tag">Retrofit</span>
+                        <span class="tech-tag">Dagger Hilt</span>
+                    </div>
+                    <div class="project-desc">
+                        <ul>
+                            <li>Dynamic stock import (API or CSV/XLSX)</li>
+                            <li>Offline-ready with report export functionality</li>
+                            <li>Improved generation speed by 30%</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-title">OnlinePicking (Android)</div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Jetpack Compose</span>
+                        <span class="tech-tag">Clean Architecture</span>
+                        <span class="tech-tag">Retrofit</span>
+                    </div>
+                    <div class="project-desc">
+                        <ul>
+                            <li>Real-time stock tracking and barcode scanning</li>
+                            <li>Offline sync capabilities</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-title">Olea Labels (Android)</div>
+                    <div class="project-tech">
+                        <span class="tech-tag">SQLDelight</span>
+                        <span class="tech-tag">Koin</span>
+                        <span class="tech-tag">Bluetooth</span>
+                    </div>
+                    <div class="project-desc">
+                        <ul>
+                            <li>Extracted invoice data from PDFs</li>
+                            <li>Printed via Bluetooth connectivity</li>
+                            <li>Data management with SQLDelight</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-title">Styiz POS (Android)</div>
+                    <div class="project-tech">
+                        <span class="tech-tag">MVVM</span>
+                        <span class="tech-tag">Android SDK</span>
+                        <span class="tech-tag">Room</span>
+                    </div>
+                    <div class="project-desc">
+                        <ul>
+                            <li>Managed inventory and sales tracking</li>
+                            <li>Comprehensive reporting system</li>
+                            <li>Built with MVVM architecture</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-title">Styiz Employee Application</div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Biometric Auth</span>
+                        <span class="tech-tag">Real-time Updates</span>
+                        <span class="tech-tag">Theme Management</span>
+                    </div>
+                    <div class="project-desc">
+                        <ul>
+                            <li>Secure login with biometric authentication</li>
+                            <li>Appointment management for salon staff</li>
+                            <li>Theme management by gender</li>
+                            <li>Real-time appointment updates</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-title">NGL Loan Application</div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Encryption</span>
+                        <span class="tech-tag">Biometric Auth</span>
+                        <span class="tech-tag">Secure Data</span>
+                    </div>
+                    <div class="project-desc">
+                        <ul>
+                            <li>Loan application submission and status tracking</li>
+                            <li>Lender communication system</li>
+                            <li>Secure data handling with encryption</li>
+                            <li>Biometric authentication integration</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-title">Metro Food</div>
+                    <div class="project-tech">
+                        <span class="tech-tag">MVVM</span>
+                        <span class="tech-tag">Real-time Tracking</span>
+                        <span class="tech-tag">Push Notifications</span>
+                    </div>
+                    <div class="project-desc">
+                        <ul>
+                            <li>Food ordering and delivery tracking app</li>
+                            <li>Cart management system</li>
+                            <li>Real-time order tracking</li>
+                            <li>Push notifications integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <strong>More projects:</strong> github.com/012rashidkp
+            </div>
+        </div>
+
+        <div class="action-bar">
+            <button class="download-btn" onclick="window.print()">
+                <i class="fas fa-download"></i> Download PDF
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Add interactive effects
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add click effect to skill tags
+        const skillTags = document.querySelectorAll('.skill-tag');
+        skillTags.forEach(tag => {
+            tag.addEventListener('click', function() {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
             });
         });
-    </script>
+
+        // Add hover effect to project cards
+        const projectCards = document.querySelectorAll('.project-card');
+        projectCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.borderLeftColor = 'var(--secondary)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.borderLeftColor = 'var(--primary)';
+            });
+        });
+
+        // Print functionality
+        const downloadBtn = document.querySelector('.download-btn');
+        downloadBtn.addEventListener('click', function() {
+            window.print();
+        });
+    });
+</script>
 </body>
 </html>
