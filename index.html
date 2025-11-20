@@ -179,14 +179,12 @@
             gap: 8px;
         }
 
-        /* Icons inside skills */
         .skill-tag i {
             font-size: 1.1em;
             display: flex;
             align-items: center;
         }
 
-        /* SVG Styles for custom inline icons */
         .skill-tag svg {
             width: 1.1em;
             height: 1.1em;
@@ -218,7 +216,7 @@
 
         .timeline-item {
             position: relative;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
         .timeline-item:last-child {
@@ -229,36 +227,73 @@
             content: '';
             position: absolute;
             left: -36px;
-            top: 5px;
+            top: 15px;
             width: 12px;
             height: 12px;
             border-radius: 50%;
             background: var(--secondary);
             border: 3px solid white;
             box-shadow: 0 0 0 3px var(--secondary);
+            z-index: 1;
+        }
+
+        .timeline-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .company-logo-container {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+            background: #fff;
+            border: 1px solid var(--gray-light);
+            border-radius: 8px;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .company-logo {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .timeline-info {
+            display: flex;
+            flex-direction: column;
         }
 
         .timeline-date {
-            font-size: 0.85rem;
-            color: var(--gray);
-            margin-bottom: 5px;
-            font-weight: 500;
+            font-size: 0.8rem;
+            color: var(--primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
         }
 
         .timeline-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 8px;
+            font-size: 1.15rem;
+            font-weight: 700;
             color: var(--dark);
+            line-height: 1.2;
         }
 
         .timeline-content ul {
             padding-left: 20px;
+            margin-top: 10px;
         }
 
         .timeline-content li {
-            margin-bottom: 5px;
+            margin-bottom: 6px;
             font-size: 0.95rem;
+            color: var(--dark);
         }
 
         .projects-grid {
@@ -416,7 +451,6 @@
             }
         }
 
-        /* Animation for elements */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -562,12 +596,9 @@
                 <div class="skill-category">
                     <h4>Network Client</h4>
                     <div class="skill-items">
-                        <!-- UPDATED: Retrofit with Custom Green Square Logo -->
                         <span class="skill-tag">
                                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <!-- Outer Rounded Square Outline -->
                                     <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm0 3h10c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2V7c0-1.1.9-2 2-2z" fill="#2CAB74"/>
-                                    <!-- Inner Solid Square -->
                                     <rect x="10" y="10" width="4" height="4" rx="0.5" fill="#2CAB74"/>
                                 </svg>
                                 Retrofit
@@ -627,7 +658,6 @@
                     <h4>Dependency Injection</h4>
                     <div class="skill-items">
                         <span class="skill-tag"><i class="fas fa-syringe"></i> Hilt Dagger</span>
-
                         <span class="skill-tag">
                                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12 12 L21 8 A 10 10 0 1 0 21 16 Z" fill="#F1B428"/>
@@ -648,7 +678,6 @@
                     </div>
                 </div>
 
-                <!-- NEW SECTIONS START HERE -->
                 <div class="skill-category">
                     <h4>Deployment</h4>
                     <div class="skill-items">
@@ -668,8 +697,6 @@
                         <span class="skill-tag"><i class="devicon-githubactions-plain colored"></i> GitHub Actions</span>
                     </div>
                 </div>
-                <!-- NEW SECTIONS END HERE -->
-
             </div>
         </div>
 
@@ -677,8 +704,15 @@
             <h2 class="section-title"><i class="fas fa-briefcase"></i> Professional Experience</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-date">Jan 2025 – Present</div>
-                    <div class="timeline-title">Safari Group of Companies — Android Developer</div>
+                    <div class="timeline-header">
+                        <div class="company-logo-container">
+                            <img src="https://logo.clearbit.com/safarigroup.net" alt="Safari Group" class="company-logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-building\'></i>'">
+                        </div>
+                        <div class="timeline-info">
+                            <div class="timeline-date">Jan 2025 – Present</div>
+                            <div class="timeline-title">Safari Group of Companies — Android Developer</div>
+                        </div>
+                    </div>
                     <div class="timeline-content">
                         <ul>
                             <li>Developing and maintaining enterprise Android applications for inventory & order management</li>
@@ -687,9 +721,17 @@
                         </ul>
                     </div>
                 </div>
+
                 <div class="timeline-item">
-                    <div class="timeline-date">Jun 2024 – Nov 2024</div>
-                    <div class="timeline-title">Inworth IT Solutions — Android/KMP Developer</div>
+                    <div class="timeline-header">
+                        <div class="company-logo-container">
+                            <img src="https://logo.clearbit.com/inworthit.com" alt="Inworth IT" class="company-logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-laptop-code\'></i>'">
+                        </div>
+                        <div class="timeline-info">
+                            <div class="timeline-date">Jun 2024 – Nov 2024</div>
+                            <div class="timeline-title">Inworth IT Solutions — Android/KMP Developer</div>
+                        </div>
+                    </div>
                     <div class="timeline-content">
                         <ul>
                             <li>Built Android & KMP-based financial, e-commerce, and appointment apps</li>
@@ -698,9 +740,17 @@
                         </ul>
                     </div>
                 </div>
+
                 <div class="timeline-item">
-                    <div class="timeline-date">Mar 2022 – Present</div>
-                    <div class="timeline-title">SoftFruit Solutions — Android Developer</div>
+                    <div class="timeline-header">
+                        <div class="company-logo-container">
+                            <img src="https://logo.clearbit.com/softfruit.solutions" alt="SoftFruit Solutions" class="company-logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-code-branch\'></i>'">
+                        </div>
+                        <div class="timeline-info">
+                            <div class="timeline-date">Mar 2022 – Mar 2024</div>
+                            <div class="timeline-title">SoftFruit Solutions — Android Developer</div>
+                        </div>
+                    </div>
                     <div class="timeline-content">
                         <ul>
                             <li>Delivered high-quality Android apps with MVVM + Jetpack Compose</li>
@@ -708,9 +758,17 @@
                         </ul>
                     </div>
                 </div>
+
                 <div class="timeline-item">
-                    <div class="timeline-date">Dec 2020 – Dec 2021</div>
-                    <div class="timeline-title">Manappuram Finance Ltd — Android Developer</div>
+                    <div class="timeline-header">
+                        <div class="company-logo-container">
+                            <img src="https://logo.clearbit.com/manappuram.com" alt="Manappuram Finance" class="company-logo" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/9/95/Manappuram_Finance_Logo.jpg'">
+                        </div>
+                        <div class="timeline-info">
+                            <div class="timeline-date">Dec 2020 – Dec 2021</div>
+                            <div class="timeline-title">Manappuram Finance Ltd — Android Developer</div>
+                        </div>
+                    </div>
                     <div class="timeline-content">
                         <ul>
                             <li>Developed secure financial apps with encrypted storage & biometric authentication</li>
@@ -718,9 +776,25 @@
                         </ul>
                     </div>
                 </div>
+
                 <div class="timeline-item">
-                    <div class="timeline-date">Aug 2019 – Oct 2020</div>
-                    <div class="timeline-title">Nuevo Informatica Ltd — Android Developer</div>
+                    <div class="timeline-header">
+                        <div class="company-logo-container">
+                            <!--
+                                IMPORTANT: The src below tries to fetch the logo online.
+                                IF IT DOESN'T WORK: Please save the logo image you have as "nuevo-logo.png"
+                                in the same folder as this HTML file.
+                            -->
+                            <img src="https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://nuevoinformatica.com&size=128"
+                                 alt="Nuevo Informatica"
+                                 class="company-logo"
+                                 onerror="this.src='nuevo-logo.png'">
+                        </div>
+                        <div class="timeline-info">
+                            <div class="timeline-date">Aug 2019 – Oct 2020</div>
+                            <div class="timeline-title">Nuevo Informatica Ltd — Android Developer</div>
+                        </div>
+                    </div>
                     <div class="timeline-content">
                         <ul>
                             <li>Built and shipped 4 Android apps with Retrofit, Room, and Glide</li>
