@@ -298,7 +298,7 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
             gap: 20px;
         }
 
@@ -335,7 +335,7 @@
             color: white;
             padding: 3px 8px;
             border-radius: 12px;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 500;
         }
 
@@ -422,7 +422,6 @@
             margin-top: 20px;
         }
 
-        /* Custom Railway icon via SVG */
         .railway-icon {
             display: inline-flex;
             align-items: center;
@@ -615,6 +614,7 @@
                         <span class="skill-tag"><i class="fas fa-bolt"></i> Volley</span>
                         <span class="skill-tag"><i class="fas fa-exchange-alt"></i> Ktor Client</span>
                         <span class="skill-tag"><i class="fas fa-globe"></i> Dio</span>
+                        <span class="skill-tag"><i class="fas fa-plug"></i> WebSocket/SignalR</span>
                     </div>
                 </div>
 
@@ -658,6 +658,7 @@
                         <span class="skill-tag"><i class="fab fa-windows"></i> Windows</span>
                         <span class="skill-tag"><i class="fab fa-apple"></i> macOS</span>
                         <span class="skill-tag"><i class="fab fa-linux"></i> Linux</span>
+                        <span class="skill-tag"><i class="fas fa-tv"></i> Android TV</span>
                     </div>
                 </div>
 
@@ -667,7 +668,6 @@
                         <span class="skill-tag"><i class="fab fa-google-play"></i> Google Play Store</span>
                         <span class="skill-tag"><i class="fab fa-app-store-ios"></i> Apple App Store</span>
                         <span class="skill-tag"><i class="fab fa-windows"></i> Microsoft Store</span>
-                        <!-- Railway added here with custom SVG icon -->
                         <span class="skill-tag">
                             <svg viewBox="0 0 24 24" width="1.1em" height="1.1em" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" fill="currentColor"/>
@@ -813,6 +813,47 @@
         <div class="card">
             <h2 class="section-title"><i class="fas fa-project-diagram"></i> Projects</h2>
             <div class="projects-grid">
+                <!-- === NEW PROJECT: Hospital Queue Display TV App (Android) - LATEST === -->
+                <div class="project-card">
+                    <div class="project-title">Hospital Queue Display TV App (Android)</div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Kotlin</span>
+                        <span class="tech-tag">Jetpack Compose</span>
+                        <span class="tech-tag">WebView</span>
+                        <span class="tech-tag">WebSocket/SignalR</span>
+                        <span class="tech-tag">TextToSpeech</span>
+                        <span class="tech-tag">DataStore</span>
+                    </div>
+                    <div class="project-desc">
+                        <ul>
+                            <li>Built an Android TV kiosk app that wraps a hospital's web-based Queue Management System in a fullscreen, hardened WebView shell — auto-launches on boot, hides all browser chrome, and blocks accidental exit or navigation</li>
+                            <li>Implemented a real-time SignalR/WebSocket client (manual protocol handling, no vendor SDK dependency) to receive live "token called" events from the hospital's queue backend, decoupled from the webpage itself</li>
+                            <li>Built a bilingual (English/Arabic) text-to-speech announcement pipeline using Android's native TextToSpeech engine — chime-then-speech sequencing, per-organization voice/language settings fetched from a REST API, and a queue system to serialize overlapping announcements</li>
+                            <li>Designed for zero-touch, multi-device deployment: a single APK configurable per-TV via Server URL and Display ID (stored locally with DataStore), with a hidden admin gesture to reopen configuration and automatic reconnect/recovery on network or server loss</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FlashFeed (Android) -->
+                <div class="project-card">
+                    <div class="project-title">FlashFeed (Android)</div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Jetpack Compose</span>
+                        <span class="tech-tag">Kotlin</span>
+                        <span class="tech-tag">Koin</span>
+                        <span class="tech-tag">Ktor</span>
+                        <span class="tech-tag">Room</span>
+                        <span class="tech-tag">Clean Architecture</span>
+                    </div>
+                    <div class="project-desc">
+                        <ul>
+                            <li>Offline-first news reader with category browsing, keyword search, and trending headlines via NewsAPI</li>
+                            <li>Clean architecture with repository/use-case layers, Room caching for offline article access, and bookmark management</li>
+                            <li>Text-to-speech article narration, WebView-based article reading, and local authentication with DataStore</li>
+                        </ul>
+                    </div>
+                </div>
+
                 <!-- CricTally (KMP) -->
                 <div class="project-card">
                     <div class="project-title">CricTally (KMP)</div>
@@ -976,7 +1017,7 @@
                     </div>
                 </div>
 
-                <!-- === FLUTTER PROJECTS SECTION === -->
+                <!-- === FLUTTER PROJECTS === -->
                 <!-- City Flower — Supermarket Offers App -->
                 <div class="project-card">
                     <div class="project-title">City Flower — Supermarket Offers App (Flutter)</div>
