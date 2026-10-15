@@ -7,7 +7,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Devicon for Programming Languages (includes TypeScript, Dart, Flutter, React, PostgreSQL) -->
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" type='text/css' href='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css' />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -422,12 +422,6 @@
             margin-top: 20px;
         }
 
-        .railway-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-
         @media (max-width: 968px) {
             .resume-container {
                 grid-template-columns: 1fr;
@@ -478,8 +472,8 @@
     <div class="sidebar">
         <div class="header">
             <h1 class="name">MUHAMMAD RASHID KP</h1>
-            <div class="title">Kotlin Multiplatform & Flutter Developer</div>
-            <div class="experience">4+ Years of Experience</div>
+            <div class="title">Kotlin Multiplatform & Android Developer</div>
+            <div class="experience">5+ Years of Experience</div>
 
             <div class="contact-info">
                 <div class="contact-item">
@@ -507,7 +501,7 @@
 
         <div class="card">
             <h2 class="section-title"><i class="fas fa-user"></i> Professional Summary</h2>
-            <p>Kotlin Multiplatform (KMP) and Flutter developer with 4+ years' experience delivering scalable, cross-platform mobile solutions for Android, iOS, desktop, and macOS. Proven track record of building performant applications with Clean Architecture, Jetpack Compose, and modern mobile SDK practices. Skilled in React with TypeScript for building dynamic web interfaces, full-stack capabilities, and integrating cross-platform solutions.</p>
+            <p>Kotlin Multiplatform (KMP) and Android developer with 5+ years' experience delivering scalable, cross-platform mobile solutions for Android, iOS, desktop, and macOS. Proven track record of building performant applications with Clean Architecture, Jetpack Compose, and modern mobile SDK practices. Skilled in React with TypeScript for building dynamic web interfaces, full-stack capabilities, and integrating cross-platform solutions. Recent work includes a professional-grade lithium battery pack design tool (GridLab) showcasing advanced Android engineering.</p>
         </div>
 
         <div class="card">
@@ -615,6 +609,15 @@
                         <span class="skill-tag"><i class="fas fa-exchange-alt"></i> Ktor Client</span>
                         <span class="skill-tag"><i class="fas fa-globe"></i> Dio</span>
                         <span class="skill-tag"><i class="fas fa-plug"></i> WebSocket/SignalR</span>
+                    </div>
+                </div>
+
+                <!-- NEW: Connectivity section with Bluetooth & WiFi -->
+                <div class="skill-category">
+                    <h4>Connectivity</h4>
+                    <div class="skill-items">
+                        <span class="skill-tag"><i class="fab fa-bluetooth-b"></i> Bluetooth</span>
+                        <span class="skill-tag"><i class="fas fa-wifi"></i> WiFi</span>
                     </div>
                 </div>
 
@@ -811,9 +814,32 @@
         </div>
 
         <div class="card">
-            <h2 class="section-title"><i class="fas fa-project-diagram"></i> Projects</h2>
+            <h2 class="section-title"><i class="fas fa-project-diagram"></i> Key Projects</h2>
             <div class="projects-grid">
-                <!-- === NEW PROJECT: Hospital Queue Display TV App (Android) - LATEST === -->
+                <!-- GridLab (Android) -->
+                <div class="project-card">
+                    <div class="project-title">GridLab (Android)</div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Kotlin</span>
+                        <span class="tech-tag">Jetpack Compose</span>
+                        <span class="tech-tag">Room</span>
+                        <span class="tech-tag">Koin</span>
+                        <span class="tech-tag">Coroutines (StateFlow)</span>
+                        <span class="tech-tag">Kotlin Serialization</span>
+                        <span class="tech-tag">Storage Access Framework (SAF)</span>
+                    </div>
+                    <div class="project-desc">
+                        <ul>
+                            <li>Built a professional-grade Android application for designing custom lithium battery packs, featuring automated series/parallel cell calculation, thermal/enclosure sizing, and state-of-charge (SoC) discharge curve simulation.</li>
+                            <li>Implemented secure local data persistence using Room with background DAO execution (Dispatchers.IO) and reactive UI updates via StateFlow.</li>
+                            <li>Developed robust engineering calculation utilities for BMS compatibility matching, continuous/peak current load verification, and physical enclosure volume estimation.</li>
+                            <li>Engineered a secure JSON backup and restore pipeline utilizing Android's Storage Access Framework (SAF) with versioning checks to prevent data corruption.</li>
+                            <li>Optimized navigation and UI responsiveness by pre-serializing default route payloads and eliminating main-thread bottlenecks.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Hospital Queue Display TV App (Android) -->
                 <div class="project-card">
                     <div class="project-title">Hospital Queue Display TV App (Android)</div>
                     <div class="project-tech">
